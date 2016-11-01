@@ -33,6 +33,8 @@ deploy:
     - script:
         name: write private key
         code: echo $test_deploy_PUBLIC > /tmp/pukey
+    - wercker/add-to-known_hosts:
+        hostname: www.panthar.org
     - pwwebdev/rsync-deploy@0.1.3:
         host: www.panthar.org
         directory: /home/panthar/sites/test.panthar.org
