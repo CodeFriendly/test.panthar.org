@@ -30,9 +30,8 @@ deploy:
   steps:
     - install-packages:
         packages: rsync
-    - script:
-        name: write private key
-        code: echo $test_deploy_PUBLIC > /tmp/pukey
+    - add-ssh-key:
+        keyname: test_deploy
     - wercker/add-to-known_hosts:
         hostname: www.panthar.org
     - pwwebdev/rsync-deploy@0.1.3:
