@@ -38,5 +38,5 @@ deploy:
         host: www.panthar.org
         directory: /home/panthar/sites/test.panthar.org
         user: panthar
-        source: _site
+        source: _site/
         sshkey: /tmp/pukey
