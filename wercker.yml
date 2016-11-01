@@ -28,6 +28,8 @@ build:
 
 deploy:
   steps:
+    - install-packages:
+        packages: rsync
     - pwwebdev/rsync-deploy@0.1.3:
         host: www.panthar.org
         directory: /home/panthar/sites/test.panthar.org
